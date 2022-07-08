@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Калькулятор</title>
+		<meta charset="utf-8" />
+		<style>
+			input, button {
+				margin: 6px;
+			}
+			
+			button {
+				width: 77px;
+			}
+		</style>
+			
+		<script>
+			function plus() {
+				var x, y, z;
+
+                document.getElementById("num3").value = "Ждите...";
+
+				x = parseInt(document.getElementById("num1").value);
+				y = parseInt(document.getElementById("num2").value);
+				
+                var url = "api/plus.php?num1=" + x + "&num2=" + y;
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET",url);
+                xhr.onload = function() {
+                    z = xhr.responseText;
+                    document.getElementById("num3").value = z;
+                };
+
+                xhr.send();
+                
+			}
+		</script>
+	</head>
+	<body>
+		<a href ="index1.html">Домашняя страница</a>
+		<h1>Калькулятор с использованием Web API</h1>
+		<input type="text" id="num1" /> <br />
+		<input type="text" id="num2"/> <br />
+		<button onclick="plus();">+</button>
+		<button onclick="minus();">-</button> <br />
+		<input type="text" id="num3"/> <br />
+        <textarea></textarea>
+	</body>
+</html>

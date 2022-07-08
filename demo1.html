@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Demo 1</title>
+		<meta charset="utf-8" />
+		<style>
+			h1 {
+				/* Определение внешнего вида тэга */
+				color: #666666;
+				background-color: silver;
+			}
+		</style>
+		<script>
+			function sayHello() {
+				//Моя первая событийная программа
+				//alert("Hello, world!");
+				document.getElementById("hdr1").innerText = "Hello, world!";
+				document.getElementById("hdr1").style.color = "red";
+				document.getElementById("hdr1").style.background = "yellow";
+				document.getElementById("cat").style.display = "none";
+			}
+		</script>
+	</head>
+	
+	<body>
+		<a href ="index1.html">Домашняя страница</a>
+		<!-- Моя первая страница -->
+		<h1 id="hdr1">Просто страница</h1>
+		<button onclick="sayHello();">Click me!</button>
+		<p>lala bubu hoho mumu</p>
+		<p>lala bubu <br />
+					hoho mumu</p>
+		<p>lala bubu hoho mumu</p>
+		<h1>Section 2</h1>
+		<img src="images/kitty.jpg" style="width: 400px" id="cat"/> <br />
+		<p>
+			<a href="https://microsoft.com">See Microsoft</a>
+			<table border="1" style="width: 50%">
+				<tr>
+					<td>assdfg</td>
+					<td>assdfg lala mama papa</td>
+					<td>assdfg</td>
+				</tr>
+				<tr>
+					<td>assdfg</td>
+					<td>assdfg lala </td>
+					<td>assdfg</td>
+				</tr>
+				<tr>
+					<td>assdfg</td>
+					<td>assdfg lala mama papa</td>
+					<td>assdfg</td>
+				</tr>
+			</table>
+		</p>
+	</body>
+
+</html>
